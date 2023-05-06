@@ -8,6 +8,7 @@ from book_sales import get_book_sales
 DSN = 'postgresql://postgres:12345678@localhost:5432/books_db'
 engine = sqlalchemy.create_engine(DSN)
 
+
 Session = sessionmaker(bind=engine)
 session = Session()
 
