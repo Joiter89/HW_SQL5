@@ -1,13 +1,6 @@
 import sqlalchemy 
 from sqlalchemy.orm import sessionmaker
 from create_tables import create_tables, Publisher, Book, Shop, Stock, Sale
-from insert_data import insert_data
-
-DSN = 'postgresql://postgres:12345678@localhost:5432/books_db'
-engine = sqlalchemy.create_engine(DSN)
-
-Session = sessionmaker(bind=engine)
-session = Session()
 
 def get_book_sales(session):
     publisher_info = input('Введите имя или идентификатор издателя (publisher): ')
